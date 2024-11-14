@@ -30,12 +30,12 @@ jobs:
         working-directory: server
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: setup python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.10
+          python-version: '3.10'
 
       - run: sudo apt-get update && sudo apt-get -y install libxml2-dev libxmlsec1-dev libxmlsec1-openssl
 
