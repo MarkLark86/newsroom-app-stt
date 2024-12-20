@@ -1,7 +1,7 @@
 import os
 import pathlib
 
-from flask_babel import lazy_gettext
+from quart_babel import lazy_gettext
 from newsroom.types import AuthProviderType
 from newsroom.web.default_settings import (
     ELASTICSEARCH_SETTINGS,
