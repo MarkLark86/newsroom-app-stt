@@ -1,4 +1,3 @@
-
 from newsroom.signals import publish_planning
 
 

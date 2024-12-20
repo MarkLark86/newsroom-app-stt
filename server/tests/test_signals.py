@@ -1,4 +1,3 @@
-
 from stt.signals import publish_planning, set_planning_all_day
 
 
