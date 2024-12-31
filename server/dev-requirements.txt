@@ -8,5 +8,5 @@ pytest-mock==3.14.0
 responses==0.25.3
 httmock==1.4.0
 httmock==1.4.0
-mypy==1.14.0
+mypy==1.14.1
 typing_extensions==4.12.2
