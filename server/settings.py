@@ -6,13 +6,13 @@ from newsroom.types import AuthProviderType
 from newsroom.web.default_settings import (
     ELASTICSEARCH_SETTINGS,
     CONTENTAPI_ELASTICSEARCH_SETTINGS,
-    BLUEPRINTS as DEFAULT_BLUEPRINT,
     CORE_APPS as DEFAULT_CORE_APPS,
     CELERY_BEAT_SCHEDULE as CELERY_BEAT_SCHEDULE_DEFAULT,
     CLIENT_LOCALE_FORMATS,
     AUTH_PROVIDERS,
     WIRE_TIME_FILTERS,
     AGENDA_SEARCH_FIELDS,
+    MODULES as DEFAULT_MODULES,
 )
 
 SERVER_PATH = pathlib.Path(__file__).resolve().parent
@@ -123,14 +123,11 @@ CORE_APPS = [
     ]
 ]
 
-BLUEPRINTS = [
-    blueprint
-    for blueprint in DEFAULT_BLUEPRINT
-    if blueprint
-    not in [
-        "newsroom.monitoring",
-    ]
-]
+MODULES = [
+    module
+    for module in DEFAULT_MODULES
+    if module not in ["newsroom.wire.module", "newsroom.monitoring.module"]
+] + ["stt.wire"]
 
 LANGUAGES = ["fi", "en"]
 DEFAULT_LANGUAGE = "fi"
