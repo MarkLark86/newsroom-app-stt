@@ -2,7 +2,11 @@ from superdesk.core.app import SuperdeskAsyncApp
 from superdesk.core.resources import fields
 
 from newsroom.types import WireItem
-from newsroom.wire.module import module, wire_items_resource_config, init_module as init_wire_module
+from newsroom.wire.module import (
+    module,
+    wire_items_resource_config,
+    init_module as init_wire_module,
+)
 
 __all__ = ["module", "STTWireItem"]
 
