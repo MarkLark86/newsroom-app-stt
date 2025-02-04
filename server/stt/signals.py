@@ -1,4 +1,5 @@
 from typing import Any
+
 from newsroom.signals import publish_planning
 
 

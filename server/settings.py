@@ -13,6 +13,7 @@ from newsroom.web.default_settings import (
     WIRE_TIME_FILTERS,
     AGENDA_SEARCH_FIELDS,
     MODULES as DEFAULT_MODULES,
+    CLIENT_CONFIG,
 )
 
 SERVER_PATH = pathlib.Path(__file__).resolve().parent
@@ -258,3 +259,10 @@ WIRE_TIME_FILTERS.extend(
 
 # STTNHUB-375
 AGENDA_SEARCH_FIELDS.append("invitation_details")
+
+
+CLIENT_CONFIG.update(
+    {
+        "show_coverage_latest_version_only": False,
+    },
+)

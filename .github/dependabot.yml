@@ -5,11 +5,24 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/client" # Location of package manifests
+  # default
+  - package-ecosystem: "npm"
+    directory: "/client"
     schedule:
       interval: "daily"
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/server" # Location of package manifests
+  - package-ecosystem: "pip"
+    directory: "/server"
+    schedule:
+      interval: "daily"
+
+ # next
+  - package-ecosystem: "npm"
+    target-branch: "next"
+    directory: "/client"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pip"
+    target-branch: "next"
+    directory: "/server"
     schedule:
       interval: "daily"
